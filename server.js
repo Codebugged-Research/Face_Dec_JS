@@ -6,6 +6,8 @@ const path = require("path");
 const http = require("http");
 const https = require("https");
 
+const httpapp = express();
+
 httpapp.get("*", function (req, res, next) {
   res.redirect("https://" + req.headers.host + req.path);
 });
