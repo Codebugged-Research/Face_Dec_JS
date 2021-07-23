@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const PORT = 5000;
+const SAMBIT = 5001;
 const path = require("path");
 var fs = require("fs");
 const http = require("http");
@@ -21,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", express.static(path.join(__dirname, "/public")));
 
 const httpServer = http.createServer(httpapp);
-httpServer.listen(PORT, () => {
+httpServer.listen(SAMBIT, () => {
   console.log("HTTP Server running on port PORT");
 });
 const httpsServer = https.createServer(
